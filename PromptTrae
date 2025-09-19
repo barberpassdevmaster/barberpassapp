@@ -1,1 +1,93 @@
+Contexto do Projeto
+Desenvolver o sistema BarberPass, uma plataforma de assinatura, marketplace e gestão de barbearias. O sistema deve contemplar clientes, barbearias e administradores, com integrações de pagamentos, gamificação e futuramente eventos.
 
+⸻
+
+1. Requisitos Funcionais
+
+Cliente
+	•	Cadastro (dados básicos + foto estilo perfil Uber).
+	•	Adicionar métodos de pagamento (wallet).
+	•	Assinar plano, realizar upgrade/downgrade.
+	•	Histórico de atendimentos.
+	•	Favoritar barbearias e barbeiros.
+	•	Score/gamificação por uso e indicações.
+	•	Área de notificações.
+	•	Buscar barbearias estilo marketplace (mapa, filtros, anúncios, ranking).
+	•	Avaliar barbearias e barbeiros.
+	•	Dar caixinha digital (tip).
+	•	Realizar check-in ao chegar na barbearia, confirmando pagamento.
+
+Barbearia
+	•	Cadastro (dados básicos + dados bancários).
+	•	Histórico de recebimentos, estatísticas e relatórios.
+	•	Cadastro de barbeiros, agenda e serviços.
+	•	Precificação:
+	•	Opção A: usar sistema BarberHub de precificação e assinatura.
+	•	Opção B: barbearia já possui sistema próprio, apenas insere valores finais.
+	•	Receber agendamentos (via app e redundância por WhatsApp).
+	•	Confirmar ou rejeitar agendamentos → cliente é informado.
+
+Administrador
+	•	Configurar parâmetros financeiros (taxas, descontos, faixas).
+	•	Aprovar/reprovar barbearias.
+	•	Gerenciar anúncios patrocinados.
+	•	Gerar relatórios globais.
+
+Futuras Funcionalidades
+	•	Plataforma completa de agendamentos e gestão interna.
+	•	Venda de ingressos para eventos de barbearia (bilheteria).
+
+⸻
+
+2. Requisitos Não Funcionais
+	•	Código documentado, com comentários claros e consistentes.
+	•	Padrão de codificação clean code + MVC/DAO.
+	•	Documentação em OpenAPI/Swagger.
+	•	Testes automatizados gerados pela IA, com cobertura unitária e de integração.
+	•	CI/CD automatizado para build, testes e deploy.
+	•	Escalabilidade (usar arquitetura baseada em microsserviços quando necessário).
+	•	Segurança em transações financeiras (PCI-DSS, LGPD).
+
+⸻
+
+3. Arquitetura e Tecnologias
+	•	Frontend/App: Flutter (Android, iOS, Web).
+	•	Backend: Node.js com NestJS.
+	•	Banco de Dados: PostgreSQL.
+	•	Infraestrutura: AWS ou GCP (com pipeline CI/CD).
+	•	Mensageria/Notificações: Firebase Cloud Messaging.
+	•	Pagamentos: Stripe / Mercado Pago / Pix.
+
+⸻
+
+4. Modelos UML a Gerar
+	•	Diagrama de Casos de Uso (clientes, barbearias, admin).
+	•	Diagrama de Classes (entidades: Cliente, Barbearia, Barbeiro, Serviço, Plano, Wallet, Transação, Evento, Notificação, Avaliação).
+	•	Diagrama de Sequência (fluxos: cadastro, assinatura, pagamento/check-in, agendamento, avaliação).
+	•	Diagrama de Implantação (arquitetura: app, backend, DB, cloud).
+	•	Diagrama ERD (Banco de Dados).
+
+⸻
+
+5. Backlog Inicial (MVP)
+	•	Sprint 1: Cadastro (cliente, barbearia), autenticação, wallet, planos.
+	•	Sprint 2: Histórico, favoritos, notificações, marketplace (busca, mapa, ranking).
+	•	Sprint 3: Avaliações, caixinha digital, admin (aprovação, parâmetros financeiros).
+	•	Sprint 4: Propostas comerciais, estatísticas barbearia, anúncios patrocinados.
+	•	Pós-MVP: agendamentos internos, bilheteria de eventos.
+
+⸻
+
+6. Instruções para Geração de Código
+	•	Gerar código organizado, com pastas separadas para módulos, controllers, services, repositories.
+	•	Usar comentários explicativos em todas as classes e funções.
+	•	Criar testes automatizados para cada requisito da matriz de rastreabilidade.
+	•	Seguir padrão de commits Git convencionais.
+	•	Manter documentação técnica completa (Swagger + README detalhado).
+
+⸻
+
+📌 Instrução final para a IA (Trae):
+
+“Com base neste documento, gere a arquitetura do projeto, o código backend e frontend, os modelos UML, o banco de dados (PostgreSQL) e os testes automatizados. O sistema deve estar pronto para rodar em ambiente de desenvolvimento e preparado para deploy em produção com CI/CD.”
